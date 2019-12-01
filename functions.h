@@ -19,11 +19,13 @@ void printResults(std::vector<Budget*>, double, double, double);
 void printToFile(std::vector<Budget*>, double, double, double);
 
 void showMenu() {
+  set_color(207);
   std::cout << "Menu:" << std::endl;
   std::cout << "Option A: Edit overall budget income" << std::endl;
   std::cout << "Option B: Edit expenses" << std::endl;
   std::cout << "Option C: Edit proportional percentages" << std::endl;
   std::cout << "Option E: Exit" << std::endl;
+  reset_color();
 }
 
 void handleOption(std::string userOption, std::vector<Budget*>& vect, double& p1, double & p2, double& budgetIncome) {
@@ -47,6 +49,8 @@ void handleOption(std::string userOption, std::vector<Budget*>& vect, double& p1
 
 void showExpenseMenu(std::vector<Budget*>& vect){
   std::string option;
+  set_color(160);
+  std::cout << "\n Expense Menu:" << std::endl;
   std::cout << "Option A: Edit Mortgage/Rent" << std::endl;
   std::cout << "Option B: Edit Electric Bills" << std::endl;
   std::cout << "Option C: Edit Gas Bills" << std::endl;
@@ -75,6 +79,7 @@ void showExpenseMenu(std::vector<Budget*>& vect){
   std::cout << "Option Z: Edit Streaming Services Expenses" << std::endl;
   std::cout << "Option AA: Edit Amazon Spendings" << std::endl;
   std::cout << "Option AB: Return" << std::endl;
+  reset_color();
   std::cout << "Please enter your option: ";
   std::cin >> option;
   handleExpense(option, vect);
@@ -82,9 +87,12 @@ void showExpenseMenu(std::vector<Budget*>& vect){
 
 void showPercentMenu(double& p1, double& p2) {
   std::string option;
+  set_color(166);
+  std::cout << "\nPercentage Menu:" << std::endl;
   std::cout << "Option A: Edit Person One's Percentage" << std::endl;
   std::cout << "Option B: Edit Person Two's Percentage" << std::endl;
   std::cout << "Option C: Return" << std::endl;
+  reset_color();
   std::cout << "Please enter your option: ";
   std::cin >> option;
   handlePercent(option, p1, p2);
@@ -256,19 +264,30 @@ void printResults(std::vector<Budget*> vect, double income, double p1, double p2
   double totalExpenses = 0.0;
   double totalP1 = 0.0;
   double totalP2 = 0.0;
+  set_color(201);
   std::cout << "Total Income: " << "$" << std::fixed << std::setprecision(2) << income << std::endl;
   std::cout << "Proportional Percentage P1: " << p1 << "%" << std::endl;
   std::cout << "Proportional Percentage P2: " << p2 << "%" << std::endl;
-  std::cout << std::setw(20) << "Description" << std::setw(10) << "Expense" << std::setw(10) << "P1" << std::setw(10) << "P2" << std::endl;
-  std::cout << "-------------------------------------------------" << std::endl;
+  std::cout << std::endl;
+  reset_color();
+  set_color(196);
+  std::cout << std::left << std::setw(20) << "Description" << std::setw(10) << "Expense" << std::setw(10) << "   P1" << std::setw(10) << "   P2" << std::endl;
+  std::cout << "-------------------------------------------------------------------" << std::endl;
+  reset_color();
   for (Budget* b : vect) {
-    std::cout << std::right << std::setw(20) << b->getDescription() << std::setw(10) << std::fixed << std::setprecision(2) << "$" << b->getCost() << std::setw(10) << std::fixed << std::setprecision(2) << "$" << b->getCost() * p1 / 100.00 << std::setw(10) << std::fixed << std::setprecision(2) << "$" << b->getCost() * p2 / 100.00 << std::endl;
+    set_color(203);
+    std::cout << std::left << std::fixed << std::setprecision(2) << std::setw(20) << b->getDescription() << "$" << std::setw(10) << b->getCost() << "$" << std::setw(10) << b->getCost() * p1 / 100.00 << "$" << std::setw(10) << b->getCost() * p2 / 100.00 << std::endl;
     totalExpenses += b->getCost();
     totalP1 += b->getCost() * p1 / 100.00;
     totalP2 += b->getCost() * p2 / 100.00;
   }
-  std::cout << std::right << std::setprecision(20) << "Total" << std::setw(10) << std::fixed << std::setprecision(2) << "$" << totalExpenses << std::setw(10) << std::fixed << std::setprecision(2) << "$" << totalP1 << std::setw(10) << std::fixed << std::setprecision(2) << "$" << totalP2 << std::endl;
-  std::cout << "Remaining: $" << std::fixed << std::setprecision(2) << income - totalExpenses << std::endl;  
+  std::cout << std::setw(20) << "Total" << "$" << std::setw(10) << std::fixed << std::setprecision(2) << totalExpenses << "$" << std::setw(10) << totalP1 << "$" << std::setw(10) << totalP2 << std::endl;
+  reset_color();
+  std::cout << std::endl;
+  set_color(208);
+  std::cout << "Remaining: $" << income - totalExpenses << std::endl;
+  std::cout << std::endl; 
+  reset_color();
 }
 
 void printToFile(std::vector<Budget*> vect, double income, double p1, double p2) {
@@ -277,18 +296,20 @@ void printToFile(std::vector<Budget*> vect, double income, double p1, double p2)
   double totalP1 = 0.0;
   double totalP2 = 0.0;
   file.open("Budget.txt");
-  file << "Total Income: " << income << std::endl;
+  file << "Total Income: $" << std::fixed << std::setprecision(2) << income << std::endl;
   file << "Proportional Percentage P1: " << p1 << "%" << std::endl;
   file << "Proportional Percentage P2: " << p2 << "%" << std::endl;
-  file << std::right << std::setw(20) << "Description" << std::setw(10) << "Expense" << std::setw(10) << "P1" << std::setw(10) << "P2" << std::endl;
+  file << std::endl;
+  file << std::left << std::setw(20) << "Description" << std::setw(10) << "Expense" << std::setw(10) << "   P1" << std::setw(10) << "   P2" << std::endl;
   file << "---------------------------------------------------------" << std::endl;
   for (Budget* b : vect) {
     totalExpenses += b->getCost();
     totalP1 += b->getCost() * p1 / 100.00;
     totalP2 += b->getCost() * p2 / 100.00;
-    file << std::setw(20) << b->getDescription() << std::setw(10) << std::fixed <<std::setprecision(2) << "$" << b->getCost() << std::setw(10) << std::fixed << std::setprecision(2) << "$" << b->getCost() * p1 / 100.00 << std::setw(10) << std::fixed << std::setprecision(2) << "$" << b->getCost() * p2 / 100.00 << std::endl;
+    file << std::left << std::fixed << std::setprecision(2) << std::setw(20) << b->getDescription() << "$" << std::setw(10) << b->getCost() << "$" << std::setw(10) << b->getCost() * p1 / 100.00 << "$" << std::setw(10) << b->getCost() * p2 / 100.00 << std::endl;
   }
-  file << std::setprecision(20) << "Total" << std::setw(10) << std::fixed << std::setprecision(2) << "$" << totalExpenses << std::setw(10) << std::fixed << std::setprecision(2) << "$" << totalP1 << std::setw(10) << std::fixed << std::setprecision(2) << "$" << totalP2 << std::endl;
+  file << std::left << std::fixed << std::setprecision(2) << std::setw(20) << "Total" << "$" << std::setw(10) << totalExpenses << "$" << std::setw(10) << totalP1 << "$" << std::setw(10) << totalP2 << std::endl;
+  file << std::endl;
   file << "Remaining: $" << std::fixed << std::setprecision(2) << income - totalExpenses << std::endl;
   file.close();
 }

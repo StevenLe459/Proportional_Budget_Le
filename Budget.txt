@@ -1,34 +1,36 @@
-Total Income: 7498.33
-Proportional Percentage P1: 60%
-Proportional Percentage P2: 40%
-         Description   Expense        P1        P2
+Total Income: $10000.00
+Proportional Percentage P1: 60.00%
+Proportional Percentage P2: 40.00%
+
+Description         Expense      P1        P2     
 ---------------------------------------------------------
-       Mortgage/Rent         $900.00         $540.00         $360.00
-            Electric         $100.00         $60.00         $40.00
-           Gas(Home)         $0.00         $0.00         $0.00
-               Water         $55.00         $33.00         $22.00
-             Savings         $500.00         $300.00         $200.00
-       Entertainment         $50.00         $30.00         $20.00
-             Clothes         $83.33         $50.00         $33.33
-               Shoes         $12.50         $7.50         $5.00
-     Vending Machine         $18.00         $10.80         $7.20
-Credit Card Payments         $200.00         $120.00         $80.00
-        Car Payments         $315.00         $189.00         $126.00
-       Car Insurance         $88.00         $52.80         $35.20
-     Car Maintenance         $25.00         $15.00         $10.00
-             Car Gas         $90.00         $54.00         $36.00
-        School Books         $0.00         $0.00         $0.00
-           Groceries         $100.00         $60.00         $40.00
-          Dining Out         $105.00         $63.00         $42.00
-   Cleaning Supplies         $12.00         $7.20         $4.80
-       Personal Care         $50.00         $30.00         $20.00
-             Charity         $100.00         $60.00         $40.00
-            Day Care         $0.00         $0.00         $0.00
-            Pet Care         $100.00         $60.00         $40.00
-          Cell Phone         $100.00         $60.00         $40.00
-            Internet         $90.00         $54.00         $36.00
-     Cable/Satellite         $0.00         $0.00         $0.00
-  Streaming Services         $35.00         $21.00         $14.00
-    Amazon Spendings         $90.00         $54.00         $36.00
-Total         $3218.83         $1931.30         $1287.53
-Remaining: $4279.50
+Mortgage/Rent       $900.00    $540.00    $360.00    
+Electric            $100.00    $60.00     $40.00     
+Gas(Home)           $0.00      $0.00      $0.00      
+Water               $55.00     $33.00     $22.00     
+Savings             $500.00    $300.00    $200.00    
+Entertainment       $50.00     $30.00     $20.00     
+Clothes             $83.33     $50.00     $33.33     
+Shoes               $12.50     $7.50      $5.00      
+Vending Machine     $18.00     $10.80     $7.20      
+Credit Card         $200.00    $120.00    $80.00     
+Car Payments        $315.00    $189.00    $126.00    
+Car Insurance       $88.00     $52.80     $35.20     
+Car Maintenance     $25.00     $15.00     $10.00     
+Car Gas             $90.00     $54.00     $36.00     
+School Books        $0.00      $0.00      $0.00      
+Groceries           $100.00    $60.00     $40.00     
+Dining Out          $105.00    $63.00     $42.00     
+Cleaning Supplies   $12.00     $7.20      $4.80      
+Personal Care       $50.00     $30.00     $20.00     
+Charity             $100.00    $60.00     $40.00     
+Day Care            $0.00      $0.00      $0.00      
+Pet Care            $100.00    $60.00     $40.00     
+Cell Phone          $100.00    $60.00     $40.00     
+Internet            $90.00     $54.00     $36.00     
+Cable/Satellite     $0.00      $0.00      $0.00      
+Streaming Services  $35.00     $21.00     $14.00     
+Amazon Spendings    $90.00     $54.00     $36.00     
+Total               $3218.83   $1931.30   $1287.53   
+
+Remaining: $6781.17

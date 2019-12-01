@@ -1,3 +1,9 @@
+//Name: Steven Le
+//Teacher: Dr_T
+//Semester: Fall 2019
+//Spreadsheet Source: https://www.dropbox.com/s/tbv42l8l7enksax/Proportional_Budget_McMillanxlsx.xlsx?dl=0
+//repl.it is the best platform to view this code
+
 #include "functions.h"
 
 int main() {
@@ -11,7 +17,7 @@ int main() {
   Budget g(83.33, "Clothes");
   Budget h(12.50, "Shoes");
   Budget i(18, "Vending Machine");
-  Budget j(200, "Credit Card Payments");
+  Budget j(200, "Credit Card");
   Budget k(315, "Car Payments");
   Budget l(88, "Car Insurance");
   Budget m(25, "Car Maintenance");
