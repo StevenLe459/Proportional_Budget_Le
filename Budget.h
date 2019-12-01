@@ -5,7 +5,7 @@
 class Budget {
   private:
     double cost;
-    std::string decription;
+    std::string description;
   public:
     Budget(double c, std::string d) {
       cost = c;
@@ -15,7 +15,7 @@ class Budget {
       return cost;
     }
     std::string getDescription() const {
-      return decription;
+      return description;
     }
     void setCost(double c) {
       cost = c;
